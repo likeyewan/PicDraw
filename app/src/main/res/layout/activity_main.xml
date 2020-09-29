@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/drawer_layout">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/pen"
+                android:id="@+id/typePick"/>
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:background="@color/black"
+                android:id="@+id/color"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:text="-"
+                android:gravity="right"
+                android:id="@+id/decrease"/>
+            <TextView
+                android:layout_width="50dp"
+                android:layout_height="20dp"
+                android:textCursorDrawable="@drawable/cursor_color"
+                android:background="@drawable/edit_bg"
+                android:layout_gravity="center"
+                android:text="1"
+                android:inputType="number"
+                android:gravity="center"
+                android:id="@+id/pen_size"/>
+            <TextView
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:text="+"
+                android:gravity="left"
+                android:id="@+id/add"/>
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@mipmap/sc"
+                android:id="@+id/delPick"/>
+
+            <Spinner
+                android:background="@drawable/spinner"
+                android:id="@+id/pic_type"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:overlapAnchor="false" />
+            <Spinner
+                android:background="@drawable/spinner"
+                android:id="@+id/pen_type"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:overlapAnchor="false" />
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/bili"
+                android:text="1:1"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/recover"
+                android:text="全图"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/cx"
+                android:text="撤销"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/redraw"
+                android:text="重画"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <FrameLayout
+                android:layout_margin="15dp"
+                android:id="@+id/act_main_mainlayout"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/act_main_mainlayout"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="x:"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/xzb"
+                    android:text="0"/>
+                <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="y:"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:id="@+id/yzb"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>
